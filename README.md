@@ -36,7 +36,7 @@ Add real screenshots of the app UI to make the project more professional. Place 
 ---
 
 ## 🧠 Architecture Diagram
-<img src="app/src/main/assets/architecture/architecture_model.jpeg" width="300"/>
+<img src="app/src/main/assets/architecture/architectural_model.jpeg" width="300"/>
 
 User Screen → Accessibility Service → Text Extraction → ONNX Runtime → MiniLM Model → Toxicity Score → Floating UI + Notifications
 
