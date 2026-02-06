@@ -22,24 +22,21 @@ ToxiGuard is a **production-focused AI-powered Android application** designed to
 Add real screenshots of the app UI to make the project more professional. Place your images inside a folder like `assets/screenshots/` and link them below.
 
 ### 🏠 Home Screen
-
-![Home Screen](app/src/main/assets/screenshots/home_screen.jpeg)
+<img src="app/src/main/assets/screenshots/home_screen.jpeg" width="300"/>
 
 ### 🛡️ Settings
-
-![Floating Overlay](app/src/main/assets/screenshots/settings.jpeg)
+<img src="app/src/main/assets/screenshots/settings.jpeg" width="300"/>
 
 ### 📊 Toxicity Result / Notification
+<img src="app/src/main/assets/screenshots/notifications.jpeg" width="300"/>
 
-![Toxicity Result](app/src/main/assets/screenshots/notifications.jpeg)
 
 
 
 ---
 
 ## 🧠 Architecture Diagram
-
-![Architecture Model](app/src/main/assets/architecture/architecture_model.jpeg)
+<img src="app/src/main/assets/architecture/architecture_model.jpeg" width="300"/>
 
 User Screen → Accessibility Service → Text Extraction → ONNX Runtime → MiniLM Model → Toxicity Score → Floating UI + Notifications
 
