@@ -23,15 +23,15 @@ Add real screenshots of the app UI to make the project more professional. Place 
 
 ### 🏠 Home Screen
 
-![Home Screen](assets/screenshots/home_screen.jpeg)
+![Home Screen](app/src/main/assets/screenshots/home_screen.jpeg)
 
 ### 🛡️ Settings
 
-![Floating Overlay](assets/screenshots/settings.jpeg)
+![Floating Overlay](app/src/main/assets/screenshots/settings.jpeg)
 
 ### 📊 Toxicity Result / Notification
 
-![Toxicity Result](assets/screenshots/notifications.jpeg)
+![Toxicity Result](app/src/main/assets/screenshots/notifications.jpeg)
 
 
 
@@ -39,7 +39,7 @@ Add real screenshots of the app UI to make the project more professional. Place 
 
 ## 🧠 Architecture Diagram
 
-![Architecture Model](assets/architecture/architecture_model.jpeg)
+![Architecture Model](app/src/main/assets/architecture/architecture_model.jpeg)
 
 User Screen → Accessibility Service → Text Extraction → ONNX Runtime → MiniLM Model → Toxicity Score → Floating UI + Notifications
 
