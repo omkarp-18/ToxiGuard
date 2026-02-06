@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboardRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".ui.DashboardActivity">
+
+    <!-- Scrollable Dashboard -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="88dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Top Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvDashboardTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dashboard"
+                        android:textColor="@color/text"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hello, User 👋"
+                        android:textColor="@color/text"
+                        android:textSize="14sp"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/ic_user_circle"
+                    android:background="@drawable/circle_bg"
+                    android:padding="4dp"/>
+            </LinearLayout>
+
+            <!-- TOXIMETER CARD (new) -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardToxiMeter"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="8dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:gravity="center_vertical">
+
+                    <!-- Big percentage -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.45"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvOverall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0%"
+                            android:textSize="28sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text"/>
+
+                        <TextView
+                            android:id="@+id/tvSentiment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="Calm"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:background="@drawable/sentiment_chip_bg"
+                            android:textColor="@color/white"/>
+                    </LinearLayout>
+
+                    <!-- Meter bar + labels -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.55"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="8dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvMeterLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Live Toxicity"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_secondary"/>
+
+                        <ProgressBar
+                            android:id="@+id/circularProgress"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="18dp"
+                            android:max="100"
+                            android:progress="0"
+                            android:layout_marginTop="10dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="8dp"
+                            android:gravity="fill_vertical">
+
+                            <TextView
+                                android:id="@+id/tvCalmLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Calm"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"/>
+
+                            <TextView
+                                android:id="@+id/tvTenseLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tense"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"/>
+
+                            <TextView
+                                android:id="@+id/tvToxicLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Toxic"
+                                android:textSize="12sp"
+                                android:textColor="@color/text_secondary"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Stats Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:weightSum="2">
+
+                <!-- Toxic Messages -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardToxicCount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="140dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    android:background="@color/white"
+                    android:animateLayoutChanges="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="Toxic Messages"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp"/>
+
+                        <TextView
+                            android:id="@+id/tvLastScan"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="Last toxic: N/A"
+                            android:textColor="@color/text"
+                            android:textSize="14sp"
+                            android:layout_marginTop="2dp"/>
+
+                        <TextView
+                            android:id="@+id/tvToxicCount"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="0"
+                            android:textColor="@color/text"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="4dp"/>
+
+                        <ProgressBar
+                            android:id="@+id/progressToxic"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            android:max="100"
+                            android:progress="0"
+                            android:progressTint="@color/toxic_high"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Overall Score -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardOverall"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="8dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    android:background="@color/white"
+                    android:animateLayoutChanges="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Overall Toxicity"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp"/>
+
+                        <!-- tvOverall is already in the ToxiMeter; keep placeholder for compatibility -->
+                        <TextView
+                            android:id="@+id/tvOverallPlaceholder"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text=""
+                            android:textColor="@color/text"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Mini Stats -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="14dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card"
+                    android:padding="10dp"
+                    android:layout_marginEnd="6dp">
+                    <TextView
+                        android:id="@+id/tvHighest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Highest: N/A"
+                        android:textColor="@color/bg_nav_color"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card"
+                    android:padding="10dp"
+                    android:layout_marginEnd="6dp">
+                    <TextView
+                        android:id="@+id/tvLowest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lowest: N/A"
+                        android:textColor="@color/bg_nav_color"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_card"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/tvTip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tip: Stay mindful."
+                        android:textColor="@color/bg_nav_color"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Analytics and Help Cards (existing IDs kept) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="18dp"
+                android:weightSum="2">
+
+                <!-- Analytics -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnAnalytics"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="160dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    android:background="@color/white">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Analytics"
+                            android:textColor="@color/text"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                        <View
+                            android:id="@+id/chartPreview"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="24dp"
+                            android:foreground="@drawable/ic_analysis"
+                            android:background="@drawable/sentiment_chip_bg" />
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Help -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnHelp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="160dp"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="8dp"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:animateLayoutChanges="true">
+
+                        <ImageView
+                            android:id="@+id/helpIcon"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/baseline_assistant_24"
+                            android:layout_marginBottom="8dp"
+                            android:alpha="0.9"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Need Help?"
+                            android:textColor="@color/text"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Buttons to open Analyzer & Live (IDs unchanged) -->
+            <Button
+                android:id="@+id/btnOpenAnalyzer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open Analyzer"
+                android:layout_marginTop="16dp"/>
+            <Button
+                android:id="@+id/btnAllowapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Block / Allow Apps"
+                android:layout_marginTop="16dp"/>
+
+            <Button
+                android:id="@+id/btnLive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Live Monitor"
+                android:layout_marginTop="8dp"/>
+            <Button
+                android:id="@+id/btnLeaderboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toxicity Leaderboard"
+                android:layout_marginTop="8dp"/>
+
+
+            <!-- 💡 Mood Trend Chart -->
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chartMood"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_card"
+                android:elevation="6dp"
+                android:padding="8dp" />
+            <!-- RecyclerView -->
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="Recent Toxic Content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/text"
+                android:layout_marginTop="18dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecent"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_recent_toxic"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"
+        android:background="@drawable/bg_nav"
+        android:elevation="10dp"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

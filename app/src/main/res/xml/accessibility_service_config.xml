@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowContentChanged|typeViewTextChanged|typeWindowStateChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:notificationTimeout="100"
+    android:canRetrieveWindowContent="true"
+    android:canPerformGestures="false"
+    android:packageNames="
+        com.whatsapp,
+        com.instagram.android,
+        com.twitter.android,
+        com.facebook.katana,
+        org.telegram.messenger,
+        com.snapchat.android,
+        com.reddit.frontpage,
+        com.discord,
+        com.linkedin.android"
+    android:description="@string/accessibility_description"
+    android:settingsActivity="com.example.toxiguard.ui.SettingsActivity"
+    android:nonInteractiveUiTimeout="5000"
+    android:interactiveUiTimeout="5000" />

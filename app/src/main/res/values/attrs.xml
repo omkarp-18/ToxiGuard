@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="ToxicityGauge">
+        <attr name="progressColor" format="color" />
+        <attr name="gaugeColor" format="color" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+</resources>

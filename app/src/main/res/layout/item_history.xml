@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardHistory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:elevation="5dp"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- <TextView
+            android:id="@+id/tvApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Detected toxic text content here..."
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:maxLines="3"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Toxicity: 0.0"
+            android:textStyle="italic"
+            android:textSize="13sp"
+            android:textColor="@color/white" /> -->
+        <!-- item_history.xml -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="@drawable/bg_card"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WhatsApp"
+                android:textStyle="bold"
+                android:textColor="@color/toxic_red"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tvDetectedText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detected message..."
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/tvOverallScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overall: 0.72"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"/>
+
+            <!-- New container for per-category bars -->
+            <LinearLayout
+                android:id="@+id/layoutCategoryScores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

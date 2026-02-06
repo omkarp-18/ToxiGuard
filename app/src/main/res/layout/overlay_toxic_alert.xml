@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#CCB00020">
+
+    <TextView
+        android:id="@+id/alertTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toxic Message Detected"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#E60000"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/alertCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category:"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/alertTrigger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trigger:"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:paddingTop="4dp"/>
+
+    <TextView
+        android:id="@+id/alertScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Severity:"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:paddingTop="6dp"/>
+
+</LinearLayout>

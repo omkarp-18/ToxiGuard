@@ -1,0 +1,18 @@
+{
+  "calm": [
+    "I don't want to argue. Let's talk later.",
+    "I prefer to stay calm. We can discuss this later."
+  ],
+  "neutral": [
+    "Okay.",
+    "I understand."
+  ],
+  "boundary": [
+    "Please stop sending such messages.",
+    "This is not appropriate. Do not contact me again."
+  ],
+  "suggestions": [
+    "You can block this user if needed.",
+    "Stay calm and avoid reacting immediately."
+  ]
+}

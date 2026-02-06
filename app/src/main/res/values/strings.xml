@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ToxiGuard</string>
+    <string name="action_open_accessibility">Open Accessibility Settings</string>
+    <string name="start_monitoring">Start Monitoring</string>
+    <string name="stop_monitoring">Stop Monitoring</string>
+    <string name="accessibility_description">ToxiGuard scans visible text to detect toxicity (local processing only)</string>
+    <string name="open_accessibility">Open Accessibility Settings</string>
+    <string name="analyze">Analyze</string>
+    <string name="toxiguard">TOXIGUARD</string>
+    <string name="overlay_permission_explain">ToxiGuard needs "Display over other apps" permission so we can blur harmful messages in-place. We\'ll only use this to hide offensive text and never send data off your device.</string>
+
+</resources>

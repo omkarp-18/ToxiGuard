@@ -1,0 +1,62 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Default App Theme -->
+    <style name="Theme.ToxiGuard" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/teal_700</item>
+        <item name="colorPrimaryVariant">@color/teal_200</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Secondary / Accent -->
+        <item name="colorSecondary">@color/purple_700</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+
+        <!-- Status bar & navigation -->
+        <item name="android:statusBarColor">@color/teal_700</item>
+        <item name="android:navigationBarColor">@color/bg</item>
+
+        <!-- Default text colors -->
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+
+        <!-- Elevation for cards, buttons, etc. -->
+        <item name="cardViewStyle">@style/Widget.ToxiGuard.CardView</item>
+        <item name="materialButtonStyle">@style/Widget.Custom.FilledButton</item>
+    </style>
+
+    <!-- ✅ NoActionBar variant -->
+    <style name="Theme.ToxiGuard.NoActionBar" parent="Theme.ToxiGuard">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Modern Filled Button -->
+    <style name="Widget.Custom.FilledButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/primary</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:stateListAnimator">@null</item> <!-- removes default elevation animation -->
+    </style>
+
+    <!-- Modern CardView Style -->
+    <style name="Widget.ToxiGuard.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">6dp</item>
+        <item name="cardBackgroundColor">@color/bg_tile_color</item>
+    </style>
+
+    <!-- Optional: Small Outlined Button -->
+    <style name="Widget.ToxiGuard.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/text_secondary</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+</resources>
